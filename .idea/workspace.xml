@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a5ac86e2-8e00-4e98-bf07-bc78b1ef066d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/043c384e-65fa-45a7-b42a-810fb17eacc3-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/254d981d-0750-49e8-9a5d-8108eac84f2c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/26277d1b-f9bf-404b-b168-1a8068c88e13-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4af292ef-02a4-4991-83bc-b4bd674d0501-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4cc6f66b-139d-4240-9190-0bf6b1f70f64-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/575c690a-eeaa-4f11-9ea7-f2312b0c891b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/60b4471f-5434-4d08-9c3d-8686ea7b786f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/60bd913b-9da5-439b-9fa9-34e4ec7ac8e4-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/6732e735-50d9-498a-b64c-cc418b204db9-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a52de903-6fe6-43fb-b319-24ad202043d5-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/aff17abe-aee4-4712-8e63-4cdeb3da28b8-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d6caa4d6-5d58-40fc-877e-5c1fec6b5da8-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d9e29821-8bfa-4bbe-9262-5e8ccbddcb61-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ea89b3eb-e5ed-4236-80d5-6f9edf1169f4-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/f61be978-1f32-4fcc-a9f2-77e3dbfade9a-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/my.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/AbstractPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/ActionsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/RecipesCuisineTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/RecipesTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2IzATrWoE1oXqPfp5bAOo25ko2Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "preferences.externalResources"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="RecipesTest.Pizza_Bianca" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson3.spoonacular.com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lesson3.spoonacular.com" />
+      <option name="MAIN_CLASS_NAME" value="lesson3.spoonacular.com.RecipesTest" />
+      <option name="METHOD_NAME" value="Pizza_Bianca" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecipesTest.Three_Bean_Greek_Kale_Salad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson3.spoonacular.com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lesson3.spoonacular.com" />
+      <option name="MAIN_CLASS_NAME" value="lesson3.spoonacular.com.RecipesTest" />
+      <option name="METHOD_NAME" value="Three_Bean_Greek_Kale_Salad" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="backend_testing" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="backend_testing" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RecipesTest.Pizza_Bianca" />
+        <item itemvalue="JUnit.RecipesTest.Three_Bean_Greek_Kale_Salad" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\igorh\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5ac86e2-8e00-4e98-bf07-bc78b1ef066d" name="Changes" comment="" />
+      <created>1671174048453</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671174048453</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
