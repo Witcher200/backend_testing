@@ -12,7 +12,6 @@ public abstract class AbstractPageTest {
 	  private static String sponacularAPI;
 	  private static String baseURL;
 	  private static String MealPlannerURL;
-
 	  private static String plusURL;
 
 	  @BeforeAll

@@ -12,9 +12,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"homemade-chicken-stock-482499?query=chicken-stock")
+				.get(getBaseURL()+"?query=chicken-stock")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -23,10 +23,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"stuffed-sweet-potato-with-spinach-hummus-feta-584549?query=" +
-					"Stuffed Sweet Potato with Spinach, Hummus %26 Feta")
+				.get(getBaseURL()+"?query=Stuffed Sweet Potato with Spinach, Hummus %26 Feta")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -35,10 +34,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"cheesy-baked-pasta-with-eggplant-and-artichokes-590452?query=" +
-					"Cheesy Baked Pasta with Eggplant and Artichokes")
+				.get(getBaseURL()+"?query=Cheesy Baked Pasta with Eggplant and Artichokes")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -47,9 +45,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"triple-berry-salad-521360?query=Triple Berry Salad")
+				.get(getBaseURL()+"?query=Triple Berry Salad")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -58,9 +56,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"strawberry-banana-oatmeal-smoothie-505651?quary=Strawberry Banana Oatmeal Smoothie")
+				.get(getBaseURL()+"?quary=Strawberry Banana Oatmeal Smoothie")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -69,9 +67,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"three-bean-greek-kale-salad-609091?query=Three Bean Greek Kale Salad")
+				.get(getBaseURL()+"?query=Three Bean Greek Kale Salad")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -80,9 +78,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"egg-salad-blta-sandwich-536064?query=Egg Salad BLTA Sandwich")
+				.get(getBaseURL()+"?query=Egg Salad BLTA Sandwich")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -91,9 +89,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"eggplant-timballo-with-cavatelli-741233?query=Eggplant Timballo with Cavatelli")
+				.get(getBaseURL()+"?query=Eggplant Timballo with Cavatelli")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -102,9 +100,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"red-lentil-carrot-soup-837230?quary=Red Lentil %26 Carrot Soup")
+				.get(getBaseURL()+"?quary=Red Lentil %26 Carrot Soup")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -113,9 +111,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"lemon-chili-tilapia-178328?quary=Lemon-Chili Tilapia")
+				.get(getBaseURL()+"?quary=Lemon-Chili Tilapia")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -124,9 +122,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"healthy-homemade-shamrock-shake-594783?quary=Healthy Homemade Shamrock Shake")
+				.get(getBaseURL()+"?quary=Healthy Homemade Shamrock Shake")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -135,9 +133,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"pizza-bianca-with-zucchini-497064?quary=Pizza Bianca")
+				.get(getBaseURL()+"?quary=Pizza Bianca")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -146,9 +144,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"one-pan-burrito-bowls-616213?quary=One Pan Burrito Bowls")
+				.get(getBaseURL()+"?quary=One Pan Burrito Bowls")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -157,10 +155,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"chocolate-peanut-butter-chia-seed-smoothie-512591?quary=" +
-					"Chocolate Peanut Butter Chia Seed Smoothi")
+				.get(getBaseURL()+"?quary=Chocolate Peanut Butter Chia Seed Smoothi")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -169,9 +166,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"cauliflower-polenta-1165088?query=Cauliflower Polenta")
+				.get(getBaseURL()+"?query=Cauliflower Polenta")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -180,9 +177,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"baked-coconut-chicken-with-spicy-sauce-492733?query=Baked Coconut Chicken with Spicy Sauce")
+				.get(getBaseURL()+"?query=Baked Coconut Chicken with Spicy Sauce")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -191,9 +188,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"/low-fat-taco-salad-532738?query=Low-Fat Taco Salad")
+				.get(getBaseURL()+"?query=Low-Fat Taco Salad")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -202,9 +199,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"cilantro-salsa-667917?query=Cilantro Salsa")
+				.get(getBaseURL()+"?query=Cilantro Salsa")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -213,9 +210,9 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"rhubarb-strawberry-smoothie-537208?quary=Rhubarb Strawberry Smoothie")
+				.get(getBaseURL()+"?quary=Rhubarb Strawberry Smoothie")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
@@ -224,8 +221,8 @@ public class RecipesTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"tequila-sriracha-glazed-salmon-532952?query=Tequila %26 Sriracha Glazed Salmon")
+				.get(getBaseURL()+"?query=Tequila %26 Sriracha Glazed Salmon")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 }

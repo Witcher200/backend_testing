@@ -12,7 +12,7 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+".cuisine?query=Top 18 to Grill Chicken")
+				.get(getBaseURL()+"?query=Top 18 to Grill Chicken")
 				.then()
 				.statusCode(200);
 	  }
@@ -23,7 +23,7 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+".cuisine?query=How to Make Chill")
+				.get(getBaseURL()+"?query=How to Make Chill")
 				.then()
 				.statusCode(200);
 	  }
@@ -34,7 +34,7 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+".cuisine?query=Trying the Top Rated Pasta")
+				.get(getBaseURL()+"?query=Trying the Top Rated Pasta")
 				.then()
 				.statusCode(200);
 	  }
@@ -45,7 +45,7 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+".cuisine?query=How to Make Mug Cake")
+				.get(getBaseURL()+"?query=How to Make Mug Cake")
 				.then()
 				.statusCode(200);
 	  }
@@ -56,7 +56,7 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+".cuisine?query=How to Make Rossetes")
+				.get(getBaseURL()+"?query=How to Make Rossetes")
 				.then()
 				.statusCode(200);
 	  }
@@ -67,7 +67,7 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+".cuisine?query=How to make Mannicotti")
+				.get(getBaseURL()+"?query=How to make Mannicotti")
 				.then()
 				.statusCode(200);
 	  }
@@ -78,7 +78,7 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+".cuisine?quary=How to Make Braised Beef")
+				.get(getBaseURL()+"?quary=How to Make Braised Beef")
 				.then()
 				.statusCode(200);
 	  }
@@ -89,7 +89,7 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+".cuisine?quary=Cream Corn Like No Other")
+				.get(getBaseURL()+"?quary=Cream Corn Like No Other")
 				.then()
 				.statusCode(200);
 	  }
@@ -100,7 +100,7 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+".cuisine?quary=How to Make Bannana Cake")
+				.get(getBaseURL()+"?quary=How to Make Bannana Cake")
 				.then()
 				.statusCode(200);
 	  }
@@ -111,7 +111,7 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+".cuisine?query=Mom's Beast Peanut Brittle")
+				.get(getBaseURL()+"?query=Mom's Beast Peanut Brittle")
 				.then()
 				.statusCode(200);
 	  }

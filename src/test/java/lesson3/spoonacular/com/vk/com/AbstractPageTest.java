@@ -18,7 +18,6 @@ public abstract class AbstractPageTest {
 			prop.load(confFile);
 
 			VkURL = prop.getProperty("VkURL");
-
 	  }
 
 	  public static String getVkURL() {

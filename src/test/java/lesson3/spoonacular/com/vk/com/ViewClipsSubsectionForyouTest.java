@@ -4,16 +4,16 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 
-public class Video_viewings extends AbstractPageTest {
+public class ViewClipsSubsectionForyouTest extends AbstractPageTest {
 
 	  @Test
 	  @Order(1)
-	  void Click_to_record() {
+	  void Opening_clips_section() {
 			given()
 				.when()
 				.get(getVkURL()+"?query=Opening clips section")
 				.then()
-				.statusCode(200);
+				.statusCode(403);
 	  }
 
 	  @Test
@@ -23,6 +23,6 @@ public class Video_viewings extends AbstractPageTest {
 				.when()
 				.get(getVkURL()+"?query=Click on date")
 				.then()
-				.statusCode(200);
+				.statusCode(403);
 	  }
 }

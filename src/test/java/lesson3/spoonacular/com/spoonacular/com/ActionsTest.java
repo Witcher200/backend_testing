@@ -9,7 +9,7 @@ public class ActionsTest extends AbstractPageTest {
 	  //Добавление рецепта
 	  @Test
 	  @Order(1)
-	  void Click_in_MyProfile() {
+	  void Click_on_MealPlanner() {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()

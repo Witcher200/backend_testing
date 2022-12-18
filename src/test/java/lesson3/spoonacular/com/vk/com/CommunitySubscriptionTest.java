@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class Community_Subscription extends AbstractPageTest{
+public class CommunitySubscriptionTest extends AbstractPageTest{
 
 	  @Test
 	  @Order(1)
@@ -14,16 +14,16 @@ public class Community_Subscription extends AbstractPageTest{
 				.when()
 				.get(getVkURL()+"?query=Go to the games section")
 				.then()
-				.statusCode(200);
+				.statusCode(403);
 	  }
 
 	  @Test
 	  @Order(2)
-	  void Click_on_history() {
+	  void Click_on_the_game_Hedgehogs() {
 			given()
 				.when()
 				.get(getVkURL()+"?query=Click on the game Hedgehogs")
 				.then()
-				.statusCode(200);
+				.statusCode(403);
 	  }
 }
