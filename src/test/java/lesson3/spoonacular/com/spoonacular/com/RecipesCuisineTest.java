@@ -1,4 +1,4 @@
-package lesson3.spoonacular.com;
+package lesson3.spoonacular.com.spoonacular.com;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
