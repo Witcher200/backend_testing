@@ -10,9 +10,9 @@ public class RecipesTest extends AbstractPageTest {
 
 	  @BeforeEach
 	  void setUp() {
+			System.out.println(" ");
 			System.out.println("Start running tests");
 			RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
-			System.out.println(" ");
 	  }
 
 	  @Test
