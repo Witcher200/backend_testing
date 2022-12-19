@@ -1,6 +1,7 @@
 package lesson3.spoonacular.com.spoonacular.com;
 
 import io.restassured.RestAssured;
+import io.restassured.http.Method;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -23,9 +24,10 @@ public class RecipesCuisineTest extends AbstractPageTest {
 				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"?query=Top 18 to Grill Chicken")
+				.request(Method.POST, getBaseURL()+"?query=Top 18 to Grill Chicken&test" +
+					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
 				.then()
-				.statusCode(200);
+				.statusCode(301);
 	  }
 
 	  @Test
@@ -36,9 +38,10 @@ public class RecipesCuisineTest extends AbstractPageTest {
 				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"?query=How to Make Chill")
+				.request(Method.POST,getBaseURL()+"?query=How to Make Chill&tes" +
+					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
 				.then()
-				.statusCode(200);
+				.statusCode(301);
 	  }
 
 	  @Test
@@ -49,9 +52,10 @@ public class RecipesCuisineTest extends AbstractPageTest {
 				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"?query=Trying the Top Rated Pasta")
+				.request(Method.POST,getBaseURL()+"?query=Trying the Top Rated Pasta&test" +
+					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
 				.then()
-				.statusCode(200);
+				.statusCode(301);
 	  }
 
 	  @Test
@@ -62,9 +66,10 @@ public class RecipesCuisineTest extends AbstractPageTest {
 				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"?query=How to Make Mug Cake")
+				.request(Method.POST,getBaseURL()+"?query=How to Make Mug Cake&test" +
+					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
 				.then()
-				.statusCode(200);
+				.statusCode(301);
 	  }
 
 	  @Test
@@ -75,9 +80,10 @@ public class RecipesCuisineTest extends AbstractPageTest {
 				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"?query=How to Make Rossetes")
+				.request(Method.POST,getBaseURL()+"?query=How to Make Rossetes&tes" +
+					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
 				.then()
-				.statusCode(200);
+				.statusCode(301);
 	  }
 
 	  @Test
@@ -88,9 +94,10 @@ public class RecipesCuisineTest extends AbstractPageTest {
 				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"?query=How to make Mannicotti")
+				.request(Method.POST,getBaseURL()+"?query=How to make Mannicotti&test" +
+					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
 				.then()
-				.statusCode(200);
+				.statusCode(301);
 	  }
 
 	  @Test
@@ -101,9 +108,10 @@ public class RecipesCuisineTest extends AbstractPageTest {
 				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"?quary=How to Make Braised Beef")
+				.request(Method.POST,getBaseURL()+"?quary=How to Make Braised Beef&test" +
+					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
 				.then()
-				.statusCode(200);
+				.statusCode(301);
 	  }
 
 	  @Test
@@ -114,9 +122,10 @@ public class RecipesCuisineTest extends AbstractPageTest {
 				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"?quary=Cream Corn Like No Other")
+				.request(Method.POST,getBaseURL()+"?quary=Cream Corn Like No Other&test" +
+					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
 				.then()
-				.statusCode(200);
+				.statusCode(301);
 	  }
 
 	  @Test
@@ -127,9 +136,10 @@ public class RecipesCuisineTest extends AbstractPageTest {
 				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"?quary=How to Make Bannana Cake")
+				.request(Method.POST,getBaseURL()+"?quary=How to Make Bannana Cake&test" +
+					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
 				.then()
-				.statusCode(200);
+				.statusCode(301);
 	  }
 
 	  @Test
@@ -138,8 +148,9 @@ public class RecipesCuisineTest extends AbstractPageTest {
 			given()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
-				.get(getBaseURL()+"?query=Mom's Beast Peanut Brittle")
+				.request(Method.POST,getBaseURL()+"?query=Mom's Beast Peanut Brittle&tes" +
+					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
 				.then()
-				.statusCode(200);
+				.statusCode(301);
 	  }
 }
