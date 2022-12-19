@@ -146,6 +146,8 @@ public class RecipesCuisineTest extends AbstractPageTest {
 	  @Order(10)
 	  void Mom_s_Beast_Peanut_Brittle() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.request(Method.POST,getBaseURL()+"?query=Mom's Beast Peanut Brittle&tes" +
