@@ -1,15 +1,26 @@
 package lesson3.spoonacular.com.spoonacular.com;
 
+import io.restassured.RestAssured;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 
 public class RecipesTest extends AbstractPageTest {
 
+	  @BeforeEach
+	  void setUp() {
+			System.out.println("Start running tests");
+			RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+			System.out.println(" ");
+	  }
+
 	  @Test
 	  @Order(1)
 	  void Chicken_Stock() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=chicken-stock")
@@ -21,6 +32,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(2)
 	  void Stuffed_Sweet_Potato() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Stuffed Sweet Potato with Spinach, Hummus %26 Feta")
@@ -32,6 +45,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(3)
 	  void Cheesy_Baked_Pasta() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Cheesy Baked Pasta with Eggplant and Artichokes")
@@ -43,6 +58,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(4)
 	  void Triple_Berry_Salad() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Triple Berry Salad")
@@ -54,6 +71,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(5)
 	  void Strawberry_Banana_Oatmeal_Smoothie() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?quary=Strawberry Banana Oatmeal Smoothie")
@@ -65,6 +84,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(6)
 	  void Three_Bean_Greek_Kale_Salad() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Three Bean Greek Kale Salad")
@@ -76,6 +97,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(7)
 	  void Egg_Salad_BLTA_Sandwich() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Egg Salad BLTA Sandwich")
@@ -87,6 +110,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(8)
 	  void Eggplant_Timballo_with_Cavatelli() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Eggplant Timballo with Cavatelli")
@@ -98,6 +123,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(9)
 	  void Red_Lentil_Carrot_Soup() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?quary=Red Lentil %26 Carrot Soup")
@@ -109,6 +136,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(10)
 	  void Lemon_Chili_Tilapia() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?quary=Lemon-Chili Tilapia")
@@ -120,6 +149,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(11)
 	  void Healthy_Homemade_Shamrock_Shake() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?quary=Healthy Homemade Shamrock Shake")
@@ -131,6 +162,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(12)
 	  void Pizza_Bianca() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?quary=Pizza Bianca")
@@ -142,6 +175,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(13)
 	  void One_Pan_Burrito_Bowls() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?quary=One Pan Burrito Bowls")
@@ -153,6 +188,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(14)
 	  void Chocolate_Peanut_Butter_Chia_Seed_Smoothi() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?quary=Chocolate Peanut Butter Chia Seed Smoothi")
@@ -164,6 +201,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(15)
 	  void Cauliflower_Polenta() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Cauliflower Polenta")
@@ -175,6 +214,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(16)
 	  void Baked_Coconut_Chicken_with_Spicy_Sauce() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Baked Coconut Chicken with Spicy Sauce")
@@ -186,6 +227,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(17)
 	  void Fat_Taco_Salad() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Low-Fat Taco Salad")
@@ -197,6 +240,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(18)
 	  void CilantroSalsa() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Cilantro Salsa")
@@ -208,6 +253,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(19)
 	  void Rhubarb_Strawberry_Smoothie() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?quary=Rhubarb Strawberry Smoothie")
@@ -219,6 +266,8 @@ public class RecipesTest extends AbstractPageTest {
 	  @Order(20)
 	  void Tequila_Sriracha_Glazed_Salmon() {
 			given()
+				.log()
+				.all()
 				.queryParam("sponacularAPI", getSponacularAPI())
 				.when()
 				.get(getBaseURL()+"?query=Tequila %26 Sriracha Glazed Salmon")

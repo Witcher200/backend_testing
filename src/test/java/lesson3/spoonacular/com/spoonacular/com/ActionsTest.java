@@ -10,6 +10,7 @@ public class ActionsTest extends AbstractPageTest {
 	  void setUp() {
 			System.out.println("Start running tests");
 			RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+			System.out.println(" ");
 	  }
 
 	  //Добавление рецепта
