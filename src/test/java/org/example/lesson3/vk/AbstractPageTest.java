@@ -1,7 +1,6 @@
-package lesson3.vk.com;
+package org.example.lesson3.vk;
 
 import org.junit.jupiter.api.BeforeAll;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;

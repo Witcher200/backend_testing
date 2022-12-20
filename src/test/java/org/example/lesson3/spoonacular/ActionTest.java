@@ -1,10 +1,10 @@
-package lesson3.spoonacular.com;
+package org.example.lesson3.spoonacular;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.*;
 import static io.restassured.RestAssured.given;
-public class ActionsTest extends AbstractPageTest {
 
+public class ActionTest extends AbstractPageTest {
 
 	  @BeforeEach
 	  void setUp() {
@@ -91,3 +91,4 @@ public class ActionsTest extends AbstractPageTest {
 			System.out.println(" ");
 	  }
 }
+

@@ -1,4 +1,4 @@
-package lesson3.spoonacular.com;
+package org.example.lesson3.spoonacular;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;
@@ -275,3 +275,4 @@ public class RecipesTest extends AbstractPageTest {
 				.statusCode(200);
 	  }
 }
+

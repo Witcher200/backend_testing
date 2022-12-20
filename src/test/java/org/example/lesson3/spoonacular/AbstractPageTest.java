@@ -1,4 +1,4 @@
-package lesson3.spoonacular.com;
+package org.example.lesson3.spoonacular;
 
 import org.junit.jupiter.api.BeforeAll;
 import java.io.FileInputStream;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public abstract class AbstractPageTest {
+public class AbstractPageTest {
 
 	  static Properties prop = new Properties();
 	  private static String sponacularAPI;
