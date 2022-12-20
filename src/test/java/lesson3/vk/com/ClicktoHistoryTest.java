@@ -1,13 +1,12 @@
-package lesson3.spoonacular.com.vk.com;
+package lesson3.vk.com;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-
 import static io.restassured.RestAssured.given;
 
-public class CommunitySubscriptionTest extends AbstractPageTest{
+public class ClicktoHistoryTest extends AbstractPageTest{
 
 	  @BeforeEach
 	  void setUp() {
@@ -18,24 +17,12 @@ public class CommunitySubscriptionTest extends AbstractPageTest{
 
 	  @Test
 	  @Order(1)
-	  void Go_to_the_games_section() {
+	  void Click_on_history() {
 			given()
 				.log()
 				.all()
 				.when()
-				.get(getVkURL()+"?query=Go to the games section")
-				.then()
-				.statusCode(403);
-	  }
-
-	  @Test
-	  @Order(2)
-	  void Click_on_the_game_Hedgehogs() {
-			given()
-				.log()
-				.all()
-				.when()
-				.get(getVkURL()+"?query=Click on the game Hedgehogs")
+				.get(getVkURL()+"?query=Click on history")
 				.then()
 				.statusCode(403);
 	  }

@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5ac86e2-8e00-4e98-bf07-bc78b1ef066d" name="Changes" comment="Backend_testing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/spoonacular/com/ActionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/spoonacular/com/ActionsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/spoonacular/com/RecipesCuisineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/spoonacular/com/RecipesCuisineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/spoonacular/com/RecipesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/spoonacular/com/RecipesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/vk/com/ClicktoHistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/vk/com/ClicktoHistoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/vk/com/CommunitySubscriptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/vk/com/CommunitySubscriptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/vk/com/CreateNoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/vk/com/CreateNoteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/vk/com/VideoViewingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/vk/com/VideoViewingsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/vk/com/ViewClipsSubsectionForyouTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/com/vk/com/ViewClipsSubsectionForyouTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="a5ac86e2-8e00-4e98-bf07-bc78b1ef066d" name="Changes" comment="Backend_testing" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671432775134</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Backend_testing">
+      <created>1671437345683</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671437345683</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

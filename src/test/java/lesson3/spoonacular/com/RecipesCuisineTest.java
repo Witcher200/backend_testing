@@ -1,4 +1,4 @@
-package lesson3.spoonacular.com.spoonacular.com;
+package lesson3.spoonacular.com;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Method;

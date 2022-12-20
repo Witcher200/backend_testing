@@ -1,4 +1,4 @@
-package lesson3.spoonacular.com.vk.com;
+package lesson3.vk.com;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;
