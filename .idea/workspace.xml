@@ -4,7 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5ac86e2-8e00-4e98-bf07-bc78b1ef066d" name="Changes" comment="Backend_testing" />
+    <list default="true" id="a5ac86e2-8e00-4e98-bf07-bc78b1ef066d" name="Changes" comment="Backend_testing">
+      <change afterPath="$PROJECT_DIR$/allure-results/285cad79-bb27-4c1c-8f1d-9345c4adc4d9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/2f02d942-12fe-46d3-8e86-f0d5cc5bac01-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/2f2394c2-5552-4ceb-aab0-a9e6dbdca1ce-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/43f61b0a-9647-4cf5-9f4b-1cbc9bfe0b57-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/47fb64a1-dc19-4e07-85af-2999b35e1d26-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4f33b2ea-eea2-4aa3-bb3c-99af434aa6d3-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4f5dc73e-7d4a-4f15-985a-9d1d9612c026-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/51fa479b-48c9-4117-8474-ef2a52dfa7f1-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/5a46a2c8-6fa6-4b81-96f6-9cbc77165b65-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/5d80d62c-e3d1-4eaf-9ca7-b0972b2d2dde-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/61f72ff5-7507-4e7d-aafd-6ad4a42c7182-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/7185b059-08dd-4335-9441-b59b161a6d15-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/88769caf-4c23-42d0-a63a-64c78d2c017e-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/8ff2c880-6bba-4d4f-a0f5-828bcecbebc0-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/9a0434ac-0c82-4912-aa01-a105771e1d1f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/9d7d2fd7-f16b-482d-a408-dc4c6dfb5b3f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a3eec0a0-d382-49f5-8427-026320c415aa-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a98ffd94-ac19-4232-ae22-a9f30ed7f4a8-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/acfadb38-616f-45d1-b823-93d209e0a00a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/b73fe265-dd95-43d0-974d-4e0ac44dded9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/c348f5fb-6c0e-437c-a395-d9d5240cb0c4-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/c4ace9f3-1e32-43b7-8d85-1e02474b5e39-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ce8dae67-bf03-422b-8353-c87ec167483b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d1bfab52-37f7-4925-8268-7e97843003ca-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/AbstractRecipesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/AbstractTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/ActionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/RecipesCuisineTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/RecipesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/AbstractPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/ClicktoHistoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/CommunitySubscriptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/CreateNoteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/VideoViewingsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/ViewClipsSubsectionForyouTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +51,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -41,21 +80,30 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "preferences.externalResources"
+    "last_opened_file_path": "C:/java/backend_testing/src/test/java/org/example/lesson3/lesson3",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\java\backend_testing\src\test\java\org\example\lesson3\lesson3" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="RecipesTest.Pizza_Bianca" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ActionTest.Click_on_MealPlanner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend_testing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson3.spoonacular.com.spoonacular.com.*" />
+          <option name="PATTERN" value="lesson4.spoonacular.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="lesson3.spoonacular.com.spoonacular.com" />
-      <option name="MAIN_CLASS_NAME" value="lesson3.spoonacular.com.spoonacular.com.RecipesTest" />
-      <option name="METHOD_NAME" value="Pizza_Bianca" />
+      <option name="PACKAGE_NAME" value="lesson4.spoonacular" />
+      <option name="MAIN_CLASS_NAME" value="lesson4.spoonacular.ActionTest" />
+      <option name="METHOD_NAME" value="Click_on_MealPlanner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -93,6 +141,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="spoonacular in Backend_testing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend_testing" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/lesson4/spoonacular" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="vk in Backend_testing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend_testing" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/lesson4/vk" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="backend_testing" />
       <method v="2">
@@ -108,8 +172,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ActionTest.Click_on_MealPlanner" />
+        <item itemvalue="JUnit.vk in Backend_testing" />
+        <item itemvalue="JUnit.spoonacular in Backend_testing" />
         <item itemvalue="JUnit.VideoViewingsTest.Click_to_record" />
-        <item itemvalue="JUnit.RecipesTest.Pizza_Bianca" />
         <item itemvalue="JUnit.RecipesTest.Three_Bean_Greek_Kale_Salad" />
       </list>
     </recent_temporary>
@@ -182,7 +248,28 @@
       <option name="project" value="LOCAL" />
       <updated>1671437345683</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Backend_testing">
+      <created>1671535721747</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671535721747</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Backend_testing">
+      <created>1671541155361</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671541155361</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Backend_testing">
+      <created>1671587819171</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671587819171</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
