@@ -1,4 +1,4 @@
-package org.example.lesson3.spoonacular;
+package lesson3.spoonacular;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Method;

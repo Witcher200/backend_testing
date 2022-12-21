@@ -1,4 +1,4 @@
-package org.example.lesson3.spoonacular;
+package lesson3.spoonacular;
 
 import org.junit.jupiter.api.BeforeAll;
 import java.io.FileInputStream;

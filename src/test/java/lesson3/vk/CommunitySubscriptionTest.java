@@ -1,4 +1,4 @@
-package org.example.lesson3.vk;
+package lesson3.vk;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;

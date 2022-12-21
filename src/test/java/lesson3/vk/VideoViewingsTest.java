@@ -1,4 +1,4 @@
-package org.example.lesson3.vk;
+package lesson3.vk;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 
-public class ViewClipsSubsectionForyouTest extends AbstractPageTest {
+public class VideoViewingsTest extends AbstractPageTest {
 
 	  @BeforeEach
 	  void setUp() {
@@ -17,24 +17,24 @@ public class ViewClipsSubsectionForyouTest extends AbstractPageTest {
 
 	  @Test
 	  @Order(1)
-	  void Opening_clips_section() {
+	  void Click_to_record() {
 			given()
 				.log()
 				.all()
 				.when()
-				.get(getVkURL()+"?query=Opening clips section")
+				.get(getVkURL()+"?query=Click to record")
 				.then()
 				.statusCode(403);
 	  }
 
 	  @Test
 	  @Order(2)
-	  void Click_on_date() {
+	  void Video_viewing() {
 			given()
 				.log()
 				.all()
 				.when()
-				.get(getVkURL()+"?query=Click on date")
+				.get(getVkURL()+"?query=Video viewing")
 				.then()
 				.statusCode(403);
 	  }
