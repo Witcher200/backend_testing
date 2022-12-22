@@ -319,6 +319,5 @@ public class RecipesTest extends AbstractTest{
 				.body()
 				.as(Response.class);
 			assertThat(response.getContentType(), containsString("Tequila Sriracha Glazed Salmon"));
-			
 	  }
 }
