@@ -30,6 +30,7 @@ public class AbstractTest {
 
 
 			responseSpecification = new ResponseSpecBuilder()
+				//У меня не получается сделать так, чтобы они работали одновременно, ну если так можно
 				.expectStatusCode(200)
 				.expectStatusCode(404)
 
