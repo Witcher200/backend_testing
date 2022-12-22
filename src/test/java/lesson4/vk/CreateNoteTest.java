@@ -18,7 +18,7 @@ public class CreateNoteTest extends AbstractPageTest{
 
 	  @Test
 	  @Order(1)
-	  void Here_you_need_to_write_title() {
+	  void Here_you_need_to_write_titleTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Here you need to write a title")
@@ -33,7 +33,7 @@ public class CreateNoteTest extends AbstractPageTest{
 
 	  @Test
 	  @Order(2)
-	  void Here_you_need_to_write_text() {
+	  void Here_you_need_to_write_textTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Here you need to write tex")
@@ -48,7 +48,7 @@ public class CreateNoteTest extends AbstractPageTest{
 
 	  @Test
 	  @Order(3)
-	  void Click_on_the_publish_button() {
+	  void Click_on_the_publish_buttonTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Click on the publish button")
@@ -63,7 +63,7 @@ public class CreateNoteTest extends AbstractPageTest{
 
 	  @Test
 	  @Order(4)
-	  void The_article_will_be_saved_and_available_at_link() {
+	  void The_article_will_be_saved_and_available_at_linkTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "The article will be saved and available at the link:")
@@ -78,7 +78,7 @@ public class CreateNoteTest extends AbstractPageTest{
 
 	  @Test
 	  @Order(5)
-	  void Click_on_save_button() {
+	  void Click_on_save_buttonTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Click on save button")

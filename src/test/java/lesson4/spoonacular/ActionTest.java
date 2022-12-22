@@ -19,7 +19,7 @@ public class ActionTest extends AbstractTest {
 	  //Добавление рецепта
 	  @Test
 	  @Order(1)
-	  void Click_on_MealPlanner() {
+	  void Click_on_MealPlannerTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Meal_planner")
@@ -35,7 +35,7 @@ public class ActionTest extends AbstractTest {
 
 	  @Test
 	  @Order(2)
-	  void Click_in_plus() {
+	  void Click_in_plusTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "add.svg")
@@ -51,7 +51,7 @@ public class ActionTest extends AbstractTest {
 
 	  @Test
 	  @Order(3)
-	  void Click_in_recipe() {
+	  void Click_in_recipeTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "mealPlannerItemOption")
@@ -68,7 +68,7 @@ public class ActionTest extends AbstractTest {
 	  //Удаление рецепта
 	  @Test
 	  @Order(4)
-	  void Click_in_picture() {
+	  void Click_in_pictureTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "img")
@@ -83,7 +83,7 @@ public class ActionTest extends AbstractTest {
 
 	  @Test
 	  @Order(5)
-	  void Click_on_delete_recipes() {
+	  void Click_on_delete_recipesTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "delete.svg")

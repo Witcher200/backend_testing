@@ -18,7 +18,7 @@ public class ClicktoHistoryTest extends AbstractPageTest{
 
 	  @Test
 	  @Order(1)
-	  void Click_on_history() {
+	  void Click_on_historyTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Click on history")

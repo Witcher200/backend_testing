@@ -20,7 +20,7 @@ public class RecipesCuisineTest extends AbstractTest {
 	  @Test
 	  @Order(1)
 	  void Top_18_to_Grill_Chicken() {
-			Response response = given().spec(requestSpecification)
+			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Top 18 to Grill Chicken")
 				.get("https://spoonacular.com/recipes.cuisine?query=Top 18 to Grill Chicken&test")
@@ -35,8 +35,8 @@ public class RecipesCuisineTest extends AbstractTest {
 
 	  @Test
 	  @Order(2)
-	  void How_to_Make_Chill() {
-			Response response = given().spec(requestSpecification)
+	  void How_to_Make_ChillTest() {
+			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "How to Make Chill")
 				.get("https://spoonacular.com/recipes.cuisine?query=How to Make Chill&tes")
@@ -51,8 +51,8 @@ public class RecipesCuisineTest extends AbstractTest {
 
 	  @Test
 	  @Order(3)
-	  void Trying_the_Top_Rated_Pasta() {
-			Response response = given().spec(requestSpecification)
+	  void Trying_the_Top_Rated_PastaTest() {
+			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Trying the Top Rated Pasta")
 				.get("https://spoonacular.com/recipes.cuisine?query=Trying the Top Rated Pasta&test")
@@ -67,8 +67,8 @@ public class RecipesCuisineTest extends AbstractTest {
 
 	  @Test
 	  @Order(4)
-	  void How_to_Make_Mug_Cake() {
-			Response response = given().spec(requestSpecification)
+	  void How_to_Make_Mug_CakeTest() {
+			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "How to Make Mug Cake")
 				.get("https://spoonacular.com/recipes.cuisine?query=How to Make Mug Cake&test")
@@ -83,8 +83,8 @@ public class RecipesCuisineTest extends AbstractTest {
 
 	  @Test
 	  @Order(5)
-	  void How_Make_Rossetes() {
-			Response response = given().spec(requestSpecification)
+	  void How_Make_RossetesTest() {
+			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "How to Make Rossetes")
 				.get("https://spoonacular.com/recipes.cuisine?query=How to Make Rossetes&tes")
@@ -99,8 +99,8 @@ public class RecipesCuisineTest extends AbstractTest {
 
 	  @Test
 	  @Order(6)
-	  void How_make_Mannicotti() {
-			Response response = given().spec(requestSpecification)
+	  void How_make_MannicottiTest() {
+			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "How to make Mannicotti")
 				.get("https://spoonacular.com/recipes.cuisine?query=How to make Mannicotti&test")
@@ -115,8 +115,8 @@ public class RecipesCuisineTest extends AbstractTest {
 
 	  @Test
 	  @Order(7)
-	  void How_to_Make_Braised_Beef() {
-			Response response = given().spec(requestSpecification)
+	  void How_to_Make_Braised_BeefTest() {
+			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "How to Make Braised Beef")
 				.get("https://spoonacular.com/recipes.cuisine?quary=How to Make Braised Beef&test")
@@ -131,8 +131,8 @@ public class RecipesCuisineTest extends AbstractTest {
 
 	  @Test
 	  @Order(8)
-	  void Cream_Corn() {
-			Response response = given().spec(requestSpecification)
+	  void Cream_CornTest() {
+			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Cream Corn Like No Other")
 				.get("https://spoonacular.com/recipes.cuisine?quary=Cream Corn Like No Other&test")
@@ -147,8 +147,8 @@ public class RecipesCuisineTest extends AbstractTest {
 
 	  @Test
 	  @Order(9)
-	  void How_to_Make_Bannana_Cake() {
-			Response response = given().spec(requestSpecification)
+	  void How_to_Make_Bannana_CakeTest() {
+			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "How to Make Bannana Cake")
 				.get("https://spoonacular.com/recipes.cuisine?quary=How to Make Bannana Cake&test")
@@ -163,8 +163,8 @@ public class RecipesCuisineTest extends AbstractTest {
 
 	  @Test
 	  @Order(10)
-	  void Mom_s_Beast_Peanut_Brittle() {
-			Response response = given().spec(requestSpecification)
+	  void Mom_s_Beast_Peanut_BrittleTest() {
+			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Mom's Beast Peanut Brittle")
 				.get("https://spoonacular.com/recipes.cuisine?query=Mom's Beast Peanut Brittle&tes")

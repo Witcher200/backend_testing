@@ -3,7 +3,7 @@ package lesson4.spoonacular;
 import org.asynchttpclient.Response;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test;;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -18,7 +18,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(1)
-	  void Chicken_Stock() {
+	  void Chicken_StockTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Chicken stock")
@@ -33,7 +33,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(2)
-	  void Stuffed_Sweet_Potato() {
+	  void Stuffed_Sweet_PotatoTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Stuffed Sweet Potato with Spinach")
@@ -48,7 +48,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(3)
-	  void Cheesy_Baked_Pasta() {
+	  void Cheesy_Baked_PastaTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Cheesy Baked Pasta with Eggplant and Artichokes")
@@ -63,7 +63,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(4)
-	  void Triple_Berry_Salad() {
+	  void Triple_Berry_SaladTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Triple Berry Salad")
@@ -78,7 +78,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(5)
-	  void Strawberry_Banana_Oatmeal_Smoothie() {
+	  void Strawberry_Banana_Oatmeal_SmoothieTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Strawberry Banana Oatmeal Smoothie")
@@ -93,7 +93,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(6)
-	  void Three_Bean_Greek_Kale_Salad() {
+	  void Three_Bean_Greek_Kale_SaladTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Three Bean Greek Kale Salad")
@@ -108,7 +108,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(7)
-	  void Egg_Salad_BLTA_Sandwich() {
+	  void Egg_Salad_BLTA_SandwichTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Egg Salad BLTA Sandwich")
@@ -123,7 +123,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(8)
-	  void Eggplant_Timballo_with_Cavatelli() {
+	  void Eggplant_Timballo_with_CavatelliTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Eggplant Timballo with Cavatelli")
@@ -138,7 +138,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(9)
-	  void Red_Lentil_Carrot_Soup() {
+	  void Red_Lentil_Carrot_SoupTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Red Lentil Carrot Soup")
@@ -153,7 +153,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(10)
-	  void Lemon_Chili_Tilapia() {
+	  void Lemon_Chili_TilapiaTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Lemon-Chili Tilapia")
@@ -168,7 +168,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(11)
-	  void Healthy_Homemade_Shamrock_Shake() {
+	  void Healthy_Homemade_Shamrock_ShakeTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Healthy Homemade Shamrock Shake")
@@ -183,7 +183,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(12)
-	  void Pizza_Bianca() {
+	  void Pizza_BiancaTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Pizza Bianca")
@@ -198,7 +198,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(13)
-	  void One_Pan_Burrito_Bowls() {
+	  void One_Pan_Burrito_BowlsTest() {
 		Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "One Pan Burrito Bowls")
@@ -213,7 +213,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(14)
-	  void Chocolate_Peanut_Butter_Chia_Seed_Smoothi() {
+	  void Chocolate_Peanut_Butter_Chia_Seed_SmoothiTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Chocolate Peanut Butter Chia Seed Smoothi")
@@ -228,7 +228,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(15)
-	  void Cauliflower_Polenta() {
+	  void Cauliflower_PolentaTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Cauliflower Polenta")
@@ -244,7 +244,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(16)
-	  void Baked_Coconut_Chicken_with_Spicy_Sauce() {
+	  void Baked_Coconut_Chicken_with_Spicy_SauceTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Baked Coconut Chicken with Spicy Sauce")
@@ -260,7 +260,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(17)
-	  void Fat_Taco_Salad() {
+	  void Fat_Taco_SaladTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Fat Taco Salad")
@@ -276,7 +276,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(18)
-	  void CilantroSalsa() {
+	  void CilantroSalsaTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Cilantro Salsa")
@@ -292,7 +292,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(19)
-	  void Rhubarb_Strawberry_Smoothie() {
+	  void Rhubarb_Strawberry_SmoothieTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Rhubarb Strawberry Smoothie")
@@ -308,7 +308,7 @@ public class RecipesTest extends AbstractTest{
 
 	  @Test
 	  @Order(20)
-	  void Tequila_Sriracha_Glazed_Salmon() {
+	  void Tequila_Sriracha_Glazed_SalmonTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Tequila Sriracha Glazed Salmon")

@@ -18,7 +18,7 @@ public class CommunitySubscriptionTest extends AbstractPageTest{
 
 	  @Test
 	  @Order(1)
-	  void Go_to_the_games_section() {
+	  void Go_to_the_games_sectionTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Go to the games section")
@@ -33,7 +33,7 @@ public class CommunitySubscriptionTest extends AbstractPageTest{
 
 	  @Test
 	  @Order(2)
-	  void Click_on_the_game_Hedgehogs() {
+	  void Click_on_the_game_HedgehogsTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Click on the game Hedgehogs")
