@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class RecipesTest extends AbstractRecipesTest{
+public class RecipesTest extends AbstractTest{
 
 	  @BeforeEach
 	  void setUp() {
@@ -28,7 +28,7 @@ public class RecipesTest extends AbstractRecipesTest{
 				.response()
 				.body()
 				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Chicken stock"));
+			assertThat(response.getContentType(), containsString("Chicken_stock"));
 	  }
 
 	  @Test
