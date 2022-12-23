@@ -24,6 +24,7 @@ public class ClicktoHistoryTest extends AbstractPageTest{
 				.formParam("title", "Click on history")
 				.get(getVkURL()+"?query=Click on history").prettyPeek()
 				.then()
+				.assertThat().statusCode(200)
 				.extract()
 				.response()
 				.body()

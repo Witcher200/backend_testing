@@ -4,6 +4,7 @@ import org.asynchttpclient.Response;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -25,6 +26,7 @@ public class ActionTest extends AbstractTest {
 				.formParam("title", "Meal_planner")
 				.get("https://spoonacular.com/meal-planner").prettyPeek()
 				.then()
+				.assertThat().statusCode(200)
 				.extract()
 				.response()
 				.body()
@@ -41,6 +43,7 @@ public class ActionTest extends AbstractTest {
 				.formParam("title", "add.svg")
 				.get("https://spoonacular.com/images/add.svg").prettyPeek()
 				.then()
+				.assertThat().statusCode(200)
 				.extract()
 				.response()
 				.body()
@@ -57,6 +60,7 @@ public class ActionTest extends AbstractTest {
 				.formParam("title", "mealPlannerItemOption")
 				.get("https://spoonacular.com/recipeBoxId-0 typeRecipe mealPlannerItemOption").prettyPeek()
 				.then()
+				.assertThat().statusCode(200)
 				.extract()
 				.response()
 				.body()
@@ -74,6 +78,7 @@ public class ActionTest extends AbstractTest {
 				.formParam("title", "img")
 				.get("https://spoonacular.com/img").prettyPeek()
 				.then()
+				.assertThat().statusCode(200)
 				.extract()
 				.response()
 				.body()
@@ -89,6 +94,7 @@ public class ActionTest extends AbstractTest {
 				.formParam("title", "delete.svg")
 				.get("https://spoonacular.com/application/frontend/images/delete.svg").prettyPeek()
 				.then()
+				.assertThat().statusCode(200)
 				.extract()
 				.response()
 				.body()

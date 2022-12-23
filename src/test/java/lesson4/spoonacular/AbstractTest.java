@@ -18,7 +18,7 @@ import java.util.Properties;
 public class AbstractTest {
 
 	  static Properties prop = new Properties();
-
+	  private static String MealPlannerURL;
 	  protected static ResponseSpecification responseSpecification;
 	  protected static RequestSpecification requestSpecification;
 
@@ -27,13 +27,11 @@ public class AbstractTest {
 			InputStream confFile = new FileInputStream("src/main/resources/my.properties");
 			prop.load(confFile);
 
-
+			MealPlannerURL = prop.getProperty("MealPlannerURL");
 
 			responseSpecification = new ResponseSpecBuilder()
-				//У меня не получается сделать так, чтобы они работали одновременно, ну если так можно
-				.expectStatusCode(200)
+				/*.expectStatusCode(200)*/
 				.expectStatusCode(404)
-
 				.expectContentType(ContentType.JSON)
 				.expectResponseTime(Matchers.lessThan(5000L))
 				.build();
@@ -48,6 +46,7 @@ public class AbstractTest {
 			RestAssured.requestSpecification = requestSpecification;
 	  }
 
+	  public  static  String getMealPlannerURL() {return MealPlannerURL;}
 
 	  public RequestSpecification getRequestSpecification(){
 			return requestSpecification;
