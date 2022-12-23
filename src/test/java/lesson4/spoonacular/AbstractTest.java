@@ -31,6 +31,7 @@ public class AbstractTest {
 
 			responseSpecification = new ResponseSpecBuilder()
 				.expectStatusCode(200)
+				//StatusCode 404 необходим для  раздела RecipesTest
 				/*.expectStatusCode(404)*/
 				.expectContentType(ContentType.JSON)
 				.expectResponseTime(Matchers.lessThan(5000L))
