@@ -30,8 +30,8 @@ public class AbstractTest {
 			MealPlannerURL = prop.getProperty("MealPlannerURL");
 
 			responseSpecification = new ResponseSpecBuilder()
-				/*.expectStatusCode(200)*/
-				.expectStatusCode(404)
+				.expectStatusCode(200)
+				/*.expectStatusCode(404)*/
 				.expectContentType(ContentType.JSON)
 				.expectResponseTime(Matchers.lessThan(5000L))
 				.build();

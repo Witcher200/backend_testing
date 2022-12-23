@@ -17,21 +17,21 @@ public class ActionTest extends AbstractTest {
 			System.out.println("Start running tests");
 	  }
 
-	  //Добавление рецепта
+	  //
 	  @Test
 	  @Order(1)
 	  void Click_on_MealPlannerTest() {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "Meal_planner")
-				.get("https://spoonacular.com/meal-planner").prettyPeek()
+				.get("https://spoonacular.com/profile/ig0r_hook/meal-planner").prettyPeek()
 				.then()
 				.extract()
 				.response()
 				.body()
 				.as(Response.class);
 			assertThat(response.getContentType(), containsString("Meal Planner"));
-			
+
 	  }
 
 	  @Test
@@ -47,7 +47,7 @@ public class ActionTest extends AbstractTest {
 				.body()
 				.as(Response.class);
 			assertThat(response.getContentType(), containsString("quickAddButton"));
-			
+
 	  }
 
 	  @Test
@@ -56,7 +56,8 @@ public class ActionTest extends AbstractTest {
 			Response response = given().spec(getRequestSpecification())
 				.when()
 				.formParam("title", "mealPlannerItemOption")
-				.get("https://spoonacular.com/recipeBoxId-0 typeRecipe mealPlannerItemOption").prettyPeek()
+				.get("https://spoonacular.com/recipeBoxId-0 typeRecipe mealPlannerItemOption")
+				.prettyPeek()
 				.then()
 				.extract()
 				.response()
@@ -66,7 +67,7 @@ public class ActionTest extends AbstractTest {
 	  }
 
 
-	  //Удаление рецепта
+	  //???????? ???????
 	  @Test
 	  @Order(4)
 	  void Click_in_pictureTest() {
