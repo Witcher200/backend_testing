@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a5ac86e2-8e00-4e98-bf07-bc78b1ef066d" name="Changes" comment="Backend_testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/AbstractTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/ActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/ActionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/RecipesCuisineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/RecipesCuisineTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/RecipesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/RecipesTest.java" afterDir="false" />
@@ -277,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671701433742</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Backend_testing">
+      <created>1671772393176</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1671772393176</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
