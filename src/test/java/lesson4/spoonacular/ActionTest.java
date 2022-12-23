@@ -17,7 +17,7 @@ public class ActionTest extends AbstractTest {
 			System.out.println("Start running tests");
 	  }
 
-	  //
+	  //Добавление рецепта
 	  @Test
 	  @Order(1)
 	  void Click_on_MealPlannerTest() {
@@ -67,7 +67,7 @@ public class ActionTest extends AbstractTest {
 	  }
 
 
-	  //???????? ???????
+	  //Удаление добавленного рецепта
 	  @Test
 	  @Order(4)
 	  void Click_in_pictureTest() {
