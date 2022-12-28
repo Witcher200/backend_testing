@@ -18,14 +18,21 @@ public class CommunitySubscriptionTest extends AbstractPageTest {
 
 	  @Test
 	  @Order(1)
-	  void Go_to_the_games_section() {
+	  void Go_to_the_games_sectionTest() {
 			given()
 				.log()
 				.all()
+				.queryParam("limitLicense", true)
+				.queryParam("user_ides", 272300066)
+				.queryParam("query", "Go to the games section")
+				.queryParam("access_token", "vk1.a.Eugk_qW0_GoB124t1iG6zjM_hfe7GF50_f1v_V97BY-lW7B3bq-gTubaZp3JdWB2bWpCn_wL6MjWEATUPWPYjVCOLc" +
+					"GR9GqxdOHm1RJnWvGITDSRn17Y2wpY7ZWvAUAlNvagWcW7ls9DwaAKgJTERYZtE4ctdjTqrVbQZ023L7zc1_n4WkxivVcmk_2dW4WNllmeHyJP0riAwsfOim68Q")
+				.queryParam("v", 5.131)
+				.expect()
 				.when()
-				.get(getVkURL()+"?query=Go to the games section")
+				.get(getVkURL()+"Go to the games section")
 				.then()
-				.statusCode(403);
+				.statusCode(404);
 	  }
 
 	  @Test
@@ -34,9 +41,16 @@ public class CommunitySubscriptionTest extends AbstractPageTest {
 			given()
 				.log()
 				.all()
+				.queryParam("limitLicense", true)
+				.queryParam("user_ides", 272300066)
+				.queryParam("query", "Click on the game Hedgehogs")
+				.queryParam("access_token", "vk1.a.Eugk_qW0_GoB124t1iG6zjM_hfe7GF50_f1v_V97BY-lW7B3bq-gTubaZp3JdWB2bWpCn_wL6MjWEATUPWPYjVCOLc" +
+					"GR9GqxdOHm1RJnWvGITDSRn17Y2wpY7ZWvAUAlNvagWcW7ls9DwaAKgJTERYZtE4ctdjTqrVbQZ023L7zc1_n4WkxivVcmk_2dW4WNllmeHyJP0riAwsfOim68Q")
+				.queryParam("v", 5.131)
+				.expect()
 				.when()
-				.get(getVkURL()+"?query=Click on the game Hedgehogs")
+				.get(getVkURL()+"Click on the game Hedgehogs")
 				.then()
-				.statusCode(403);
+				.statusCode(404);
 	  }
 }

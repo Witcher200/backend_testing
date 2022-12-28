@@ -1,181 +1,123 @@
 package lesson4.spoonacular;
 
-import org.asynchttpclient.Response;
+import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.filter.log.LogDetail;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.containsString;
+import static io.restassured.RestAssured.*;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-
-public class RecipesCuisineTest extends AbstractTest {
+public class RecipesCuisineTest extends AbstractPageTest {
 
 	  @BeforeEach
 	  void setUp() {
 			System.out.println(" ");
 			System.out.println("Start running tests");
+			RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+
+			responseSpecification = new ResponseSpecBuilder()
+				.expectStatusCode(200)
+				.expectStatusLine("HTTP/1.1 200 OK")
+				.expectResponseTime(Matchers.lessThan(5000L))
+				.build();
+
+			requestSpecification = new RequestSpecBuilder()
+				.addQueryParam("apiKey", getSponacularAPI())
+				.addQueryParam("limitLicense", true)
+				.log(LogDetail.ALL)
+				.build();
 	  }
 
 	  @Test
 	  @Order(1)
-	  void Top_18_to_Grill_Chicken() {
-			Response response = given().spec(getRequestSpecification())
+	  void Top_18_to_Grill_ChickenTes() {
+			given()
+				.expect()
 				.when()
-				.formParam("title", "Top 18 to Grill Chicken")
-				.get("https://spoonacular.com/recipes.cuisine")
-				.prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Top 18 to Grill Chicken"));
+				.post(getRecipes_cuisine()+"?query=Top18&number=35&limitLicense=true#");
 	  }
 
 	  @Test
 	  @Order(2)
 	  void How_to_Make_ChillTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "How to Make Chill")
-				.get("https://spoonacular.com/recipes.cuisine")
-				.prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("How to Make Chill"));
+				.post(getRecipes_cuisine()+"?query=Make&number=28&limitLicense=true#");
 	  }
 
 	  @Test
 	  @Order(3)
 	  void Trying_the_Top_Rated_PastaTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "Trying the Top Rated Pasta")
-				.get("https://spoonacular.com/recipes.cuisine")
-				.prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Trying the Top Rated Pasta"));
+				.post(getRecipes_cuisine()+"?query=Pasta&number=27&limitLicense=true#");
 	  }
 
 	  @Test
 	  @Order(4)
 	  void How_to_Make_Mug_CakeTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "How to Make Mug Cake")
-				.get("https://spoonacular.com/recipes.cuisine")
-				.prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("How to Make Mug Cake"));
+				.post(getRecipes_cuisine()+"?query=How to Make Mug Cake&limitLicense=true#");
 	  }
 
 	  @Test
 	  @Order(5)
 	  void How_Make_RossetesTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "How to Make Rossetes")
-				.get("https://spoonacular.com/recipes.cuisine")
-				.prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("How to Make Rossetes"));
+				.post(getRecipes_cuisine()+"?query=How to Make Rossetes&limitLicense=true#");
 	  }
 
 	  @Test
 	  @Order(6)
 	  void How_make_MannicottiTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "How to make Mannicotti")
-				.get("https://spoonacular.com/recipes.cuisine")
-				.prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("How to make Mannicotti"));
+				.post(getRecipes_cuisine()+"?query=How to make Mannicotti&limitLicense=true#");
 	  }
 
 	  @Test
 	  @Order(7)
 	  void How_to_Make_Braised_BeefTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "How to Make Braised Beef")
-				.get("https://spoonacular.com/recipes.cuisine")
-				.prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("How to Make Braised Beef"));
+				.post(getRecipes_cuisine()+"?quary=How to Make Braised&limitLicense=true#");
 	  }
 
 	  @Test
 	  @Order(8)
 	  void Cream_CornTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "Cream Corn Like No Other")
-				.get("https://spoonacular.com/recipes.cuisine")
-				.prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Cream Corn Like No Other"));
+				.post(getRecipes_cuisine()+"?quary=Cream Corn Like No Other&limitLicense=true#");
 	  }
 
 	  @Test
 	  @Order(9)
 	  void How_to_Make_Bannana_CakeTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "How to Make Bannana Cake")
-				.get("https://spoonacular.com/recipes.cuisine")
-				.prettyPeek()
-				.then()
-				
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("How to Make Bannana Cake"));
+				.post(getRecipes_cuisine()+"?quary=How to Make Bannana Cake&limitLicense=true#");
 	  }
 
 	  @Test
 	  @Order(10)
 	  void Mom_s_Beast_Peanut_BrittleTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "Mom's Beast Peanut Brittle")
-				.get("https://spoonacular.com/recipes.cuisine")
-				.prettyPeek()
-				.then()
-				
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Mom's Beast Peanut Brittle"));
+				.post(getRecipes_cuisine()+"?query=Mom's Beast Peanut Brittle&limitLicense=true#");
 	  }
 }

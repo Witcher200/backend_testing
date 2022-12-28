@@ -1,93 +1,79 @@
 package lesson4.vk;
 
-import org.asynchttpclient.Response;
+import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static io.restassured.RestAssured.*;
 
-public class CreateNoteTest extends AbstractPageTest{
+public class CreateNoteTest extends AbstractPageTest {
 
 	  @BeforeEach
 	  void setUp() {
 			System.out.println(" ");
 			System.out.println("Start running tests");
+			RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+
+			responseSpecification = new ResponseSpecBuilder()
+				.expectStatusCode(404)
+				.expectStatusLine("HTTP/1.1 404 Not Found")
+				.expectResponseTime(Matchers.lessThan(5000L))
+				.build();
+
+			requestSpecification = new RequestSpecBuilder()
+				.addQueryParam("limitLicense", true)
+				.addQueryParam("user_ides", 272300066)
+				.addQueryParam("access_token", "vk1.a.Eugk_qW0_GoB124t1iG6zjM_hfe7GF50_f1v_V97BY-lW7B3bq-gTubaZp3JdWB2bWpCn_wL6MjWEATUPWPYjVCOLc" +
+					"GR9GqxdOHm1RJnWvGITDSRn17Y2wpY7ZWvAUAlNvagWcW7ls9DwaAKgJTERYZtE4ctdjTqrVbQZ023L7zc1_n4WkxivVcmk_2dW4WNllmeHyJP0riAwsfOim68Q")
+				.addQueryParam("v", 5.131)
+				.build();
 	  }
 
 	  @Test
 	  @Order(1)
 	  void Here_you_need_to_write_titleTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "Here you need to write a title")
-				.get(getVkURL()+"?query=Here you need to write a title").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Here you need to write a title"));
+				.post(getVkURL()+"Here you need to write a title");
 	  }
 
 	  @Test
 	  @Order(2)
 	  void Here_you_need_to_write_textTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "Here you need to write tex")
-				.get(getVkURL()+"?query=Here you need to write tex").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Here you need to write tex"));
+				.post(getVkURL()+"Here you need to write text");
 	  }
 
 	  @Test
 	  @Order(3)
 	  void Click_on_the_publish_buttonTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "Click on the publish button")
-				.get(getVkURL()+"?query=Click on the publish button").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Click on the publish button"));
+				.post(getVkURL()+"Click on the publish button");
 	  }
 
 	  @Test
 	  @Order(4)
 	  void The_article_will_be_saved_and_available_at_linkTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "The article will be saved and available at the link:")
-				.get(getVkURL()+"?query=The article will be saved and available at the link:").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("The article will be saved and available at the link:"));
+				.post(getVkURL()+"Click on the publish button");
 	  }
 
 	  @Test
 	  @Order(5)
 	  void Click_on_save_buttonTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "Click on save button")
-				.get(getVkURL()+"?query=Click on save button").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Click on save button"));
+				.post(getVkURL()+"Click on save button");
 	  }
 }

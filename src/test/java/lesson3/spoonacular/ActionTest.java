@@ -3,6 +3,8 @@ package lesson3.spoonacular;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.*;
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class ActionTest extends AbstractPageTest {
 
@@ -13,78 +15,82 @@ public class ActionTest extends AbstractPageTest {
 			RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
 	  }
 
-	  //Добавление рецепта
 	  @Test
 	  @Order(1)
-	  void Click_on_MealPlanner() {
+	  void Click_on_MealPlannerTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.get(getMealURL()+"meal-planner")
+				.get(getMealURL()+"?query=MealPlanner&number=28&limitLicense=true")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(2)
-	  void Click_in_plus() {
+	  void Click_in_plusTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.expect()
 				.when()
-				.get(getPlusURL()+"images/add.svg")
+				.get(getPlusURL()+"?query=plus&limitLicense=true	")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(3)
-	  void Click_in_recipe() {
+	  void Search_boxTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.expect()
 				.when()
-				.get(getPlusURL()+"recipeBoxId-0 typeRecipe mealPlannerItemOption")
+				.get(getMealURL()+"?query=search&limitLicense=true")
 				.then()
 				.statusCode(200);
 	  }
 
-
-
-	  //Удаление рецепта
 	  @Test
 	  @Order(4)
-	  void Click_in_picture() {
+	  void Click_in_pictureTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.expect()
 				.when()
-				.get(getPlusURL()+"img")
+				.get(getMealURL()+"?query=picture&limitLicense=true")
 				.then()
 				.statusCode(200);
 	  }
+
 	  @Test
 	  @Order(5)
-	  void Click_on_delete_recipes() {
+	  void Click_on_delete_recipesTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.expect()
 				.when()
-				.get(getPlusURL()+"images/delete.svg")
+				.get(getMealURL()+"?query=delit_resipes&limitLicense=true")
 				.then()
-				.statusCode(404);
+				.statusCode(200);
 	  }
 
 	  @AfterAll
 	  static void cleanUp() {
 			System.out.println("After All cleanUp() method called");
 	  }
+
 	  @AfterEach
 	  void tearDown() {
 			System.out.println("End of test execution");

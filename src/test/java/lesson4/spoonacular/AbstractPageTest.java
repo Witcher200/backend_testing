@@ -1,4 +1,4 @@
-package lesson3.spoonacular;
+package lesson4.spoonacular;
 
 import org.junit.jupiter.api.BeforeAll;
 import java.io.FileInputStream;
@@ -30,16 +30,8 @@ public class AbstractPageTest {
 	  public static String getSponacularAPI() {
 			return sponacularAPI;
 	  }
-
-	  public static String getBaseURL() {
-			return baseURL;
-	  }
-
+	  public static String getBaseURL() {return baseURL;}
 	  public static String getMealURL() {return MealPlannerURL;}
-
 	  public static String getPlusURL() {return plusURL;}
-
-	  public static String getRecipes_cuisine() {
-			return Recipes_cuisine;
-	  }
+	  public static String getRecipes_cuisine() {return Recipes_cuisine;}
 }

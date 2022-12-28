@@ -1,7 +1,6 @@
 package lesson3.spoonacular;
 
 import io.restassured.RestAssured;
-import io.restassured.http.Method;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -19,142 +18,152 @@ public class RecipesCuisineTest extends AbstractPageTest {
 
 	  @Test
 	  @Order(1)
-	  void Top_18_to_Grill_Chicken() {
+	  void Top_18_to_Grill_ChickenTes() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.request(Method.POST, getBaseURL()+"?query=Top 18 to Grill Chicken&test" +
-					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
+				.post(getRecipes_cuisine()+"?query=Top18&number=35&limitLicense=true#")
 				.then()
-				.statusCode(301);
+				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(2)
-	  void How_to_Make_Chill() {
+	  void How_to_Make_ChillTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.request(Method.POST, getBaseURL()+"?query=How to Make Chill&tes" +
-					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
+				.post(getRecipes_cuisine()+"?query=Make&number=28&limitLicense=true#")
 				.then()
-				.statusCode(301);
+				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(3)
-	  void Trying_the_Top_Rated_Pasta() {
+	  void Trying_the_Top_Rated_PastaTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.request(Method.POST, getBaseURL()+"?query=Trying the Top Rated Pasta&test" +
-					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
+				.post(getRecipes_cuisine()+"?query=Pasta&number=27&limitLicense=true#")
 				.then()
-				.statusCode(301);
+				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(4)
-	  void How_to_Make_Mug_Cake() {
+	  void How_to_Make_Mug_CakeTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.request(Method.POST, getBaseURL()+"?query=How to Make Mug Cake&test" +
-					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
+				.post(getRecipes_cuisine()+"?query=How to Make Mug Cake&limitLicense=true#")
 				.then()
-				.statusCode(301);
+				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(5)
-	  void How_Make_Rossetes() {
+	  void How_Make_RossetesTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.request(Method.POST, getBaseURL()+"?query=How to Make Rossetes&tes" +
-					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
+				.post(getRecipes_cuisine()+"?query=How to Make Rossetes&limitLicense=true#")
 				.then()
-				.statusCode(301);
+				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(6)
-	  void How_make_Mannicotti() {
+	  void How_make_MannicottiTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.request(Method.POST, getBaseURL()+"?query=How to make Mannicotti&test" +
-					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
+				.post(getRecipes_cuisine()+"?query=How to make Mannicotti&limitLicense=true#")
 				.then()
-				.statusCode(301);
+				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(7)
-	  void How_to_Make_Braised_Beef() {
+	  void How_to_Make_Braised_BeefTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.request(Method.POST, getBaseURL()+"?quary=How to Make Braised Beef&test" +
-					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
+				.post(getRecipes_cuisine()+"?quary=How to Make Braised&limitLicense=true#")
 				.then()
-				.statusCode(301);
+				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(8)
-	  void Cream_Corn() {
+	  void Cream_CornTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.request(Method.POST, getBaseURL()+"?quary=Cream Corn Like No Other&test" +
-					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
+				.post(getRecipes_cuisine()+"?quary=Cream Corn Like No Other&limitLicense=true#")
 				.then()
-				.statusCode(301);
+				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(9)
-	  void How_to_Make_Bannana_Cake() {
+	  void How_to_Make_Bannana_CakeTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.request(Method.POST, getBaseURL()+"?quary=How to Make Bannana Cake&test" +
-					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
+				.post(getRecipes_cuisine()+"?quary=How to Make Bannana Cake&limitLicense=true#")
 				.then()
-				.statusCode(301);
+				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(10)
-	  void Mom_s_Beast_Peanut_Brittle() {
+	  void Mom_s_Beast_Peanut_BrittleTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.expect()
 				.when()
-				.request(Method.POST, getBaseURL()+"?query=Mom's Beast Peanut Brittle&tes" +
-					"includeNutrition={Nutrition}&apiKey={apiKey}", false, getSponacularAPI())
+				.post(getRecipes_cuisine()+"?query=Mom's Beast Peanut Brittle&limitLicense=true#")
 				.then()
-				.statusCode(301);
+				.statusCode(200);
 	  }
 }
 

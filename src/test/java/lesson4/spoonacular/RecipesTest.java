@@ -1,323 +1,310 @@
 package lesson4.spoonacular;
 
-import org.asynchttpclient.Response;
+import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.filter.log.LogDetail;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;;
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.MatcherAssert.assertThat;
+import org.junit.jupiter.api.Test;
 
-public class RecipesTest extends AbstractTest{
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.containsString;
+
+public class RecipesTest extends AbstractPageTest {
 
 	  @BeforeEach
 	  void setUp() {
 			System.out.println(" ");
 			System.out.println("Start running tests");
+			RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+
+			responseSpecification = new ResponseSpecBuilder()
+				.expectStatusCode(200)
+				.expectStatusLine("HTTP/1.1 200 OK")
+				.expectResponseTime(Matchers.lessThan(5000L))
+				.build();
+
+			requestSpecification = new RequestSpecBuilder()
+				.addQueryParam("apiKey", getSponacularAPI())
+				.addQueryParam("limitLicense", true)
+				.log(LogDetail.ALL)
+				.build();
 	  }
 
 	  @Test
 	  @Order(1)
 	  void Chicken_StockTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 10)
+				.queryParam("query", "chicken")
+				.expect()
+				.body("number", equalTo(10))
+				.body("results[0].title", containsString("Chicken"))
 				.when()
-				.formParam("title", "Chicken stock")
-				.get("https://spoonacular.com/recipes/homemade-chicken-stock-482499").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Chicken_stock"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
+
+	  /*@Test
+	  @Order(2)
+	  void RoastBeef_IDTest(){
+			given()
+				.expect()
+				.body("id", equalTo(769774))
+				.body("readyInMinutes", equalTo(45))
+				.body("title", containsString("Roast Beef"))
+				//	.body("totalResults", above(136))
+				.when()
+				.get(getBaseURL()+"recipes/769774/information");
+	  }*/
+
 
 	  @Test
 	  @Order(2)
 	  void Stuffed_Sweet_PotatoTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 5)
+				.queryParam("query", "sweet potato")
+				.expect()
+				.body("number", equalTo(5))
+				.body("results[0].title", containsString("Potato"))
 				.when()
-				.formParam("title", "Stuffed Sweet Potato with Spinach")
-				.get("https://spoonacular.com/recipes/stuffed-sweet-potato-with-spinach-hummus-feta-584549").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Stuffed Sweet Potato with Spinach"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(3)
 	  void Cheesy_Baked_PastaTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 5)
+				.queryParam("query", "sweet potato")
+				.expect()
+				.body("number", equalTo(5))
+				.body("results[0].title", containsString("Potato"))
 				.when()
-				.formParam("title", "Cheesy Baked Pasta with Eggplant and Artichokes")
-				.get("https://spoonacular.com/recipes/cheesy-baked-pasta-with-eggplant-and-artichokes-590452").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Cheesy Baked Pasta with Eggplant and Artichokes"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(4)
 	  void Triple_Berry_SaladTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 8)
+				.queryParam("query", "Berry Salad")
+				.expect()
+				.body("number", equalTo(8))
+				.body("results[0].title", containsString("Berry Salad"))
 				.when()
-				.formParam("title", "Triple Berry Salad")
-				.get("https://spoonacular.com/recipes/triple-berry-salad-521360").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Triple Berry Salad"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(5)
 	  void Strawberry_Banana_Oatmeal_SmoothieTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 8)
+				.queryParam("query", "Strawberry Banana")
+				.expect()
+				.body("number", equalTo(8))
+				.body("results[0].title", containsString("Strawberry Banana"))
 				.when()
-				.formParam("title", "Strawberry Banana Oatmeal Smoothie")
-				.get("https://spoonacular.com/recipes/strawberry-banana-oatmeal-smoothie-505651").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Strawberry Banana Oatmeal Smoothie"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(6)
 	  void Three_Bean_Greek_Kale_SaladTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 10)
+				.queryParam("query", "Kale Salad")
+				.expect()
+				.body("number", equalTo(10))
+				.body("results[0].title", containsString("Kale Salad"))
 				.when()
-				.formParam("title", "Three Bean Greek Kale Salad")
-				.get("https://spoonacular.com/recipes/three-bean-greek-kale-salad-609091").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Three Bean Greek Kale Salad"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(7)
 	  void Egg_Salad_BLTA_SandwichTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 15)
+				.queryParam("query", "Egg Salad")
+				.expect()
+				.body("number", equalTo(15))
+				.body("results[0].title", containsString("Egg Salad"))
 				.when()
-				.formParam("title", "Egg Salad BLTA Sandwich")
-				.get("https://spoonacular.com/recipes/egg-salad-blta-sandwich-536064").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Egg Salad BLTA Sandwich"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(8)
 	  void Eggplant_Timballo_with_CavatelliTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 15)
+				.queryParam("query", "Egg Salad")
+				.expect()
+				.body("number", equalTo(15))
+				.body("results[0].title", containsString("Egg Salad"))
 				.when()
-				.formParam("title", "Eggplant Timballo with Cavatelli")
-				.get("https://spoonacular.com/recipes/eggplant-timballo-with-cavatelli-741233").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Eggplant Timballo with Cavatelli"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(9)
 	  void Red_Lentil_Carrot_SoupTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 4)
+				.queryParam("query", "Red Lentil")
+				.expect()
+				.body("number", equalTo(4))
+				.body("results[0].title", containsString("Red Lentil"))
 				.when()
-				.formParam("title", "Red Lentil Carrot Soup")
-				.get("https://spoonacular.com/recipes/red-lentil-carrot-soup-837230").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Red Lentil Carrot Soup"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(10)
 	  void Lemon_Chili_TilapiaTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 12)
+				.queryParam("query", "Tilapia")
+				.expect()
+				.body("number", equalTo(12))
+				.body("results[0].title", containsString("Tilapia"))
 				.when()
-				.formParam("title", "Lemon-Chili Tilapia")
-				.get("https://spoonacular.com/recipes/lemon-chili-tilapia-178328").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Lemon-Chili Tilapia"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(11)
 	  void Healthy_Homemade_Shamrock_ShakeTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 18)
+				.queryParam("query", "Shake")
+				.expect()
+				.body("number", equalTo(18))
+				.body("results[0].title", containsString("Shake"))
 				.when()
-				.formParam("title", "Healthy Homemade Shamrock Shake")
-				.get("https://spoonacular.com/recipes/healthy-homemade-shamrock-shake-594783").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Healthy Homemade Shamrock Shake"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(12)
 	  void Pizza_BiancaTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 5)
+				.queryParam("query", "Pizza")
+				.expect()
+				.body("number", equalTo(5))
+				.body("results[0].title", containsString("Pizza"))
 				.when()
-				.formParam("title", "Pizza Bianca")
-				.get("https://spoonacular.com/recipes/pizza-bianca-with-zucchini-497064").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Pizza Bianca"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(13)
 	  void One_Pan_Burrito_BowlsTest() {
-		Response response = given().spec(getRequestSpecification())
-			.when()
-			.formParam("title", "One Pan Burrito Bowls")
-			.get("https://spoonacular.com/recipes/one-pan-burrito-bowls-616213").prettyPeek()
-			.then()
-			.extract()
-			.response()
-			.body()
-			.as(Response.class);
-		assertThat(response.getContentType(), containsString("One Pan Burrito Bowls"));
+			given()
+				.queryParam("number", 8)
+				.queryParam("query", "Burrito")
+				.expect()
+				.body("number", equalTo(8))
+				.body("results[0].title", containsString("Burrito"))
+				.when()
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(14)
 	  void Chocolate_Peanut_Butter_Chia_Seed_SmoothiTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 13)
+				.queryParam("query", "Butter")
+				.expect()
+				.body("number", equalTo(13))
+				.body("results[0].title", containsString("Butter"))
 				.when()
-				.formParam("title", "Chocolate Peanut Butter Chia Seed Smoothi")
-				.get("https://spoonacular.com/recipes/chocolate-peanut-butter-chia-seed-smoothie-512591").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Chocolate Peanut Butter Chia Seed Smoothi"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(15)
 	  void Cauliflower_PolentaTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 20)
+				.queryParam("query", "Polenta")
+				.expect()
+				.body("number", equalTo(20))
+				.body("results[0].title", containsString("Polenta"))
 				.when()
-				.formParam("title", "Cauliflower Polenta")
-				.get("https://spoonacular.com/recipes/cauliflower-polenta-1165088").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Cauliflower Polenta"));
-			
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(16)
 	  void Baked_Coconut_Chicken_with_Spicy_SauceTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 11)
+				.queryParam("query", "Chicken")
+				.expect()
+				.body("number", equalTo(11))
+				.body("results[0].title", containsString("Chicken"))
 				.when()
-				.formParam("title", "Baked Coconut Chicken with Spicy Sauce")
-				.get("https://spoonacular.com/recipes/baked-coconut-chicken-with-spicy-sauce-492733").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Baked Coconut Chicken with Spicy Sauce"));
-			
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(17)
 	  void Fat_Taco_SaladTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 24)
+				.queryParam("query", "Taco")
+				.expect()
+				.body("number", equalTo(24)).
+					body("results[0].title", containsString("Taco"))
 				.when()
-				.formParam("title", "Fat Taco Salad")
-				.get("https://spoonacular.com/recipes/low-fat-taco-salad-532738").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Fat Taco Salad"));
-			
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(18)
 	  void CilantroSalsaTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 3)
+				.queryParam("query", "Salsa")
+				.expect()
+				.body("number", equalTo(3))
+				.body("results[0].title", containsString("Salsa"))
 				.when()
-				.formParam("title", "Cilantro Salsa")
-				.get("https://spoonacular.com/recipes/cilantro-salsa-667917").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Cilantro Salsa"));
-			
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(19)
 	  void Rhubarb_Strawberry_SmoothieTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 26)
+				.queryParam("query", "Smoothie")
+				.expect()
+				.body("number", equalTo(26))
+				.body("results[0].title", containsString("Smoothie"))
 				.when()
-				.formParam("title", "Rhubarb Strawberry Smoothie")
-				.get("https://spoonacular.com/recipes/rhubarb-strawberry-smoothie-537208").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Rhubarb Strawberry Smoothie"));
-			
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 
 	  @Test
 	  @Order(20)
 	  void Tequila_Sriracha_Glazed_SalmonTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.queryParam("number", 32)
+				.queryParam("query", "Salmon")
+				.expect()
+				.body("number", equalTo(32))
+				.body("results[0].title", containsString("Salmon"))
 				.when()
-				.formParam("title", "Tequila Sriracha Glazed Salmon")
-				.get("https://spoonacular.com/recipes/tequila-sriracha-glazed-salmon-532952?query=Tequila %26 Sriracha Glazed Salmon").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Tequila Sriracha Glazed Salmon"));
+				.get(getBaseURL()+"recipes/complexSearch");
 	  }
 }

@@ -4,11 +4,14 @@ import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.containsString;
 
 public class RecipesTest extends AbstractPageTest {
 
-	  @BeforeEach
+	 @BeforeEach
 	  void setUp() {
 			System.out.println(" ");
 			System.out.println("Start running tests");
@@ -17,260 +20,405 @@ public class RecipesTest extends AbstractPageTest {
 
 	  @Test
 	  @Order(1)
-	  void Chicken_Stock() {
+	  void Chicken_StockTest(){
+		   given()
+				.log()
+				.all()
+				.queryParam("apiKey", getSponacularAPI())
+	   		    .queryParam("limitLicense", true)
+				.queryParam("number", 10)
+				.queryParam("query", "chicken")
+				.expect()
+				.body("number", equalTo(10))
+			    .body("results[0].title", containsString("Chicken"))
+			//	.body("totalResults", above(136))
+				.when()
+				.get(getBaseURL()+"recipes/complexSearch")
+				.then()
+		        .statusCode(200);
+
+//	   assertThat(response.get("number"), equalTo(10));
+	  }
+
+	  /*@Test
+	  @Order(2)
+	  void RoastBeef_IDTest(){
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.expect()
+				.body("id", equalTo(769774))
+				.body("readyInMinutes", equalTo(45))
+				.body("title", containsString("Roast Beef"))
+
+				//	.body("totalResults", above(136))
 				.when()
-				.get(getBaseURL()+"?query=chicken-stock")
+				.get(getBaseURL()+"recipes/769774/information")
 				.then()
 				.statusCode(200);
-	  }
+
+//	   assertThat(response.get("number"), equalTo(10));
+	  }*/
+
 
 	  @Test
 	  @Order(2)
-	  void Stuffed_Sweet_Potato() {
+	  void Stuffed_Sweet_PotatoTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 5)
+				.queryParam("query", "sweet potato")
+				.expect()
+				.body("number", equalTo(5))
+				.body("results[0].title", containsString("Potato"))
 				.when()
-				.get(getBaseURL()+"?query=Stuffed Sweet Potato with Spinach, Hummus %26 Feta")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(3)
-	  void Cheesy_Baked_Pasta() {
+	  void Cheesy_Baked_PastaTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 5)
+				.queryParam("query", "sweet potato")
+				.expect()
+				.body("number", equalTo(5))
+				.body("results[0].title", containsString("Potato"))
 				.when()
-				.get(getBaseURL()+"?query=Cheesy Baked Pasta with Eggplant and Artichokes")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(4)
-	  void Triple_Berry_Salad() {
+	  void Triple_Berry_SaladTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 8)
+				.queryParam("query", "Berry Salad")
+				.expect()
+				.body("number", equalTo(8))
+				.body("results[0].title", containsString("Berry Salad"))
 				.when()
-				.get(getBaseURL()+"?query=Triple Berry Salad")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(5)
-	  void Strawberry_Banana_Oatmeal_Smoothie() {
+	  void Strawberry_Banana_Oatmeal_SmoothieTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 8)
+				.queryParam("query", "Strawberry Banana")
+				.expect()
+				.body("number", equalTo(8))
+				.body("results[0].title", containsString("Strawberry Banana"))
 				.when()
-				.get(getBaseURL()+"?quary=Strawberry Banana Oatmeal Smoothie")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(6)
-	  void Three_Bean_Greek_Kale_Salad() {
+	  void Three_Bean_Greek_Kale_SaladTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 10)
+				.queryParam("query", "Kale Salad")
+				.expect()
+				.body("number", equalTo(10))
+				.body("results[0].title", containsString("Kale Salad"))
 				.when()
-				.get(getBaseURL()+"?query=Three Bean Greek Kale Salad")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(7)
-	  void Egg_Salad_BLTA_Sandwich() {
+	  void Egg_Salad_BLTA_SandwichTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 15)
+				.queryParam("query", "Egg Salad")
+				.expect()
+				.body("number", equalTo(15))
+				.body("results[0].title", containsString("Egg Salad"))
 				.when()
-				.get(getBaseURL()+"?query=Egg Salad BLTA Sandwich")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(8)
-	  void Eggplant_Timballo_with_Cavatelli() {
+	  void Eggplant_Timballo_with_CavatelliTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 15)
+				.queryParam("query", "Egg Salad")
+				.expect()
+				.body("number", equalTo(15))
+				.body("results[0].title", containsString("Egg Salad"))
 				.when()
-				.get(getBaseURL()+"?query=Eggplant Timballo with Cavatelli")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(9)
-	  void Red_Lentil_Carrot_Soup() {
+	  void Red_Lentil_Carrot_SoupTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 4)
+				.queryParam("query", "Red Lentil")
+				.expect()
+				.body("number", equalTo(4))
+				.body("results[0].title", containsString("Red Lentil"))
 				.when()
-				.get(getBaseURL()+"?quary=Red Lentil %26 Carrot Soup")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(10)
-	  void Lemon_Chili_Tilapia() {
+	  void Lemon_Chili_TilapiaTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 12)
+				.queryParam("query", "Tilapia")
+				.expect()
+				.body("number", equalTo(12))
+				.body("results[0].title", containsString("Tilapia"))
 				.when()
-				.get(getBaseURL()+"?quary=Lemon-Chili Tilapia")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(11)
-	  void Healthy_Homemade_Shamrock_Shake() {
+	  void Healthy_Homemade_Shamrock_ShakeTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 18)
+				.queryParam("query", "Shake")
+				.expect()
+				.body("number", equalTo(18))
+				.body("results[0].title", containsString("Shake"))
 				.when()
-				.get(getBaseURL()+"?quary=Healthy Homemade Shamrock Shake")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(12)
-	  void Pizza_Bianca() {
+	  void Pizza_BiancaTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 5)
+				.queryParam("query", "Pizza")
+				.expect()
+				.body("number", equalTo(5))
+				.body("results[0].title", containsString("Pizza"))
 				.when()
-				.get(getBaseURL()+"?quary=Pizza Bianca")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(13)
-	  void One_Pan_Burrito_Bowls() {
+	  void One_Pan_Burrito_BowlsTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 8)
+				.queryParam("query", "Burrito")
+				.expect()
+				.body("number", equalTo(8))
+				.body("results[0].title", containsString("Burrito"))
 				.when()
-				.get(getBaseURL()+"?quary=One Pan Burrito Bowls")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(14)
-	  void Chocolate_Peanut_Butter_Chia_Seed_Smoothi() {
+	  void Chocolate_Peanut_Butter_Chia_Seed_SmoothiTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 13)
+				.queryParam("query", "Butter")
+				.expect()
+				.body("number", equalTo(13))
+				.body("results[0].title", containsString("Butter"))
 				.when()
-				.get(getBaseURL()+"?quary=Chocolate Peanut Butter Chia Seed Smoothi")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(15)
-	  void Cauliflower_Polenta() {
+	  void Cauliflower_PolentaTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 20)
+				.queryParam("query", "Polenta")
+				.expect()
+				.body("number", equalTo(20))
+				.body("results[0].title", containsString("Polenta"))
 				.when()
-				.get(getBaseURL()+"?query=Cauliflower Polenta")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(16)
-	  void Baked_Coconut_Chicken_with_Spicy_Sauce() {
+	  void Baked_Coconut_Chicken_with_Spicy_SauceTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 11)
+				.queryParam("query", "Chicken")
+				.expect()
+				.body("number", equalTo(11))
+				.body("results[0].title", containsString("Chicken"))
 				.when()
-				.get(getBaseURL()+"?query=Baked Coconut Chicken with Spicy Sauce")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(17)
-	  void Fat_Taco_Salad() {
+	  void Fat_Taco_SaladTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 24)
+				.queryParam("query", "Taco")
+				.expect()
+				.body("number", equalTo(24))
+				.body("results[0].title", containsString("Taco"))
 				.when()
-				.get(getBaseURL()+"?query=Low-Fat Taco Salad")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(18)
-	  void CilantroSalsa() {
+	  void CilantroSalsaTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 3)
+				.queryParam("query", "Salsa")
+				.expect()
+				.body("number", equalTo(3))
+				.body("results[0].title", containsString("Salsa"))
 				.when()
-				.get(getBaseURL()+"?query=Cilantro Salsa")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(19)
-	  void Rhubarb_Strawberry_Smoothie() {
+	  void Rhubarb_Strawberry_SmoothieTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 26)
+				.queryParam("query", "Smoothie")
+				.expect()
+				.body("number", equalTo(26))
+				.body("results[0].title", containsString("Smoothie"))
 				.when()
-				.get(getBaseURL()+"?quary=Rhubarb Strawberry Smoothie")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }
 
 	  @Test
 	  @Order(20)
-	  void Tequila_Sriracha_Glazed_Salmon() {
+	  void Tequila_Sriracha_Glazed_SalmonTest() {
 			given()
 				.log()
 				.all()
-				.queryParam("sponacularAPI", getSponacularAPI())
+				.queryParam("apiKey", getSponacularAPI())
+				.queryParam("limitLicense", true)
+				.queryParam("number", 32)
+				.queryParam("query", "Salmon")
+				.expect()
+				.body("number", equalTo(32))
+				.body("results[0].title", containsString("Salmon"))
 				.when()
-				.get(getBaseURL()+"?query=Tequila %26 Sriracha Glazed Salmon")
+				.get(getBaseURL()+"recipes/complexSearch")
 				.then()
 				.statusCode(200);
 	  }

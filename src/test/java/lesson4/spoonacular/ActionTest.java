@@ -1,100 +1,89 @@
 package lesson4.spoonacular;
 
-import org.asynchttpclient.Response;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.filter.log.LogDetail;
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.*;
+import static io.restassured.RestAssured.*;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.MatcherAssert.assertThat;
-
-public class ActionTest extends AbstractTest {
+public class ActionTest extends AbstractPageTest {
 
 	  @BeforeEach
 	  void setUp() {
 			System.out.println(" ");
 			System.out.println("Start running tests");
+			RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+
+			responseSpecification = new ResponseSpecBuilder()
+				.expectStatusCode(200)
+				.expectStatusLine("HTTP/1.1 200 OK")
+				.expectResponseTime(Matchers.lessThan(5000L))
+				.build();
+
+			requestSpecification = new RequestSpecBuilder()
+				.addQueryParam("apiKey", getSponacularAPI())
+				.addQueryParam("limitLicense", true)
+				.log(LogDetail.ALL)
+				.build();
 	  }
 
-	  //Добавление рецепта
 	  @Test
 	  @Order(1)
 	  void Click_on_MealPlannerTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "Meal_planner")
-				.get("https://spoonacular.com/profile/ig0r_hook/meal-planner").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Meal Planner"));
-
+				.get(getMealURL()+"?query=MealPlanner&number=28&limitLicense=true");
 	  }
 
 	  @Test
 	  @Order(2)
 	  void Click_in_plusTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "add.svg")
-				.get("https://spoonacular.com/images/add.svg").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("quickAddButton"));
-
+				.get(getPlusURL()+"?query=plus&limitLicense=true");
 	  }
 
 	  @Test
 	  @Order(3)
-	  void Click_in_recipeTest() {
-			Response response = given().spec(getRequestSpecification())
+	  void Search_boxTest() {
+			given()
+				.expect()
 				.when()
-				.formParam("title", "mealPlannerItemOption")
-				.get("https://spoonacular.com/recipeBoxId-0 typeRecipe mealPlannerItemOption")
-				.prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("Mince Pie Recipes"));
+				.get(getMealURL()+"?query=search&limitLicense=true");
 	  }
 
-
-	  //Удаление добавленного рецепта
 	  @Test
 	  @Order(4)
 	  void Click_in_pictureTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "img")
-				.get("https://spoonacular.com/img").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("img"));
+				.get(getMealURL()+"?query=picture&limitLicense=true");
 	  }
 
 	  @Test
 	  @Order(5)
 	  void Click_on_delete_recipesTest() {
-			Response response = given().spec(getRequestSpecification())
+			given()
+				.expect()
 				.when()
-				.formParam("title", "delete.svg")
-				.get("https://spoonacular.com/application/frontend/images/delete.svg").prettyPeek()
-				.then()
-				.extract()
-				.response()
-				.body()
-				.as(Response.class);
-			assertThat(response.getContentType(), containsString("MealPlanner.removeItem(this)"));
+				.get(getMealURL()+"?query=delit_resipes&limitLicense=true");
+	  }
+
+	  @AfterAll
+	  static void cleanUp() {
+			System.out.println("After All cleanUp() method called");
+	  }
+
+	  @AfterEach
+	  void tearDown() {
+			System.out.println("End of test execution");
+			System.out.println(" ");
 	  }
 }
+
+

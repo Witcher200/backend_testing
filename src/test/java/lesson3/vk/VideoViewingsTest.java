@@ -21,10 +21,18 @@ public class VideoViewingsTest extends AbstractPageTest {
 			given()
 				.log()
 				.all()
+				.queryParam("limitLicense", true)
+				.queryParam("user_ides", 272300066)
+				.queryParam("query", "Click to record")
+				.queryParam("limitLicense", "true")
+				.queryParam("access_token", "vk1.a.Eugk_qW0_GoB124t1iG6zjM_hfe7GF50_f1v_V97BY-lW7B3bq-gTubaZp3JdWB2bWpCn_wL6MjWEATUPWPYjVCOLc" +
+					"GR9GqxdOHm1RJnWvGITDSRn17Y2wpY7ZWvAUAlNvagWcW7ls9DwaAKgJTERYZtE4ctdjTqrVbQZ023L7zc1_n4WkxivVcmk_2dW4WNllmeHyJP0riAwsfOim68Q")
+				.queryParam("v", 5.131)
+				.expect()
 				.when()
-				.get(getVkURL()+"?query=Click to record")
+				.post(getVkURL()+"Click to record")
 				.then()
-				.statusCode(403);
+				.statusCode(404);
 	  }
 
 	  @Test
@@ -33,9 +41,17 @@ public class VideoViewingsTest extends AbstractPageTest {
 			given()
 				.log()
 				.all()
+				.queryParam("limitLicense", true)
+				.queryParam("user_ides", 272300066)
+				.queryParam("query", "Video viewing")
+				.queryParam("limitLicense", "true")
+				.queryParam("access_token", "vk1.a.Eugk_qW0_GoB124t1iG6zjM_hfe7GF50_f1v_V97BY-lW7B3bq-gTubaZp3JdWB2bWpCn_wL6MjWEATUPWPYjVCOLc" +
+					"GR9GqxdOHm1RJnWvGITDSRn17Y2wpY7ZWvAUAlNvagWcW7ls9DwaAKgJTERYZtE4ctdjTqrVbQZ023L7zc1_n4WkxivVcmk_2dW4WNllmeHyJP0riAwsfOim68Q")
+				.queryParam("v", 5.131)
+				.expect()
 				.when()
-				.get(getVkURL()+"?query=Video viewing")
+				.post(getVkURL()+"Video viewing")
 				.then()
-				.statusCode(403);
+				.statusCode(404);
 	  }
 }
