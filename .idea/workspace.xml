@@ -5,43 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5ac86e2-8e00-4e98-bf07-bc78b1ef066d" name="Changes" comment="Backend_testing">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/fileColors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/AbstractPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson5/api/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson5/api/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson5/dto/GetCategoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson5/dto/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson5/util/ConfigUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson5/util/RetrofitUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson5/CreateProductTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson5/GetCategoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson5/GetProductTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/resources/aplication.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/my.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/my.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/AbstractPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/AbstractPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/ActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/ActionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/RecipesCuisineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/RecipesCuisineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/RecipesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/spoonacular/RecipesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/vk/ClicktoHistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/vk/ClicktoHistoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/vk/CommunitySubscriptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/vk/CommunitySubscriptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/vk/CreateNoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/vk/CreateNoteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/vk/VideoViewingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/vk/VideoViewingsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/vk/ViewClipsSubsectionForyouTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/vk/ViewClipsSubsectionForyouTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/AbstractTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/ActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/ActionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/RecipesCuisineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/RecipesCuisineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/RecipesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/spoonacular/RecipesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/vk/AbstractPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/AbstractPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/vk/ClicktoHistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/ClicktoHistoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/vk/CommunitySubscriptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/CommunitySubscriptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/vk/CreateNoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/CreateNoteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/vk/VideoViewingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/VideoViewingsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/lesson4/vk/ViewClipsSubsectionForyouTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson4/vk/ViewClipsSubsectionForyouTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/lesson3/vk/AbstractPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lesson3/vk/AbstractPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -71,18 +64,24 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/java/backend_testing/src/test/java/org/example/lesson3/lesson3",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
+    "last_opened_file_path": "C:/Users/igorh/OneDrive/Рабочий стол",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "IntelliLang.Advanced"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="lesson5.util" />
+      <recent name="lesson5" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\java\backend_testing\src\test\java" />
       <recent name="C:\java\backend_testing\src\test\java\org\example\lesson3\lesson3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\java\backend_testing\src\main\resources" />
       <recent name="C:\java\backend_testing\src\test\java\lesson4\spoonacular" />
     </key>
   </component>
@@ -135,22 +134,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateNoteTest.Here_you_need_to_write_textTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Backend_testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lesson3.vk.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="lesson3.vk" />
-      <option name="MAIN_CLASS_NAME" value="lesson3.vk.CreateNoteTest" />
-      <option name="METHOD_NAME" value="Here_you_need_to_write_textTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CreateNoteTest.The_article_will_be_saved_and_available_at_linkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend_testing" />
       <extension name="coverage">
@@ -162,6 +145,22 @@
       <option name="PACKAGE_NAME" value="lesson3.vk" />
       <option name="MAIN_CLASS_NAME" value="lesson3.vk.CreateNoteTest" />
       <option name="METHOD_NAME" value="The_article_will_be_saved_and_available_at_linkTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetCategoryTest.getCategoryByIdPositiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lesson5" />
+      <option name="MAIN_CLASS_NAME" value="lesson5.GetCategoryTest" />
+      <option name="METHOD_NAME" value="getCategoryByIdPositiveTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GetCategoryTest.getCategoryByIdPositiveTest" />
         <item itemvalue="JUnit.ClicktoHistoryTest.Click_on_historyTest" />
         <item itemvalue="JUnit.CommunitySubscriptionTest.Click_on_the_game_Hedgehogs" />
         <item itemvalue="JUnit.CreateNoteTest.Click_on_save_buttonTest" />
         <item itemvalue="JUnit.CreateNoteTest.The_article_will_be_saved_and_available_at_linkTest" />
-        <item itemvalue="JUnit.CreateNoteTest.Here_you_need_to_write_textTest" />
       </list>
     </recent_temporary>
   </component>
@@ -363,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671809651251</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Backend_testing">
+      <created>1672215267025</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1672215267025</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

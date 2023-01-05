@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public abstract class AbstractPageTest {
 
-	  static Properties prop = new Properties();
+	  public static Properties prop = new Properties();
 	  private static String VkURL;
 
 	  @BeforeAll
