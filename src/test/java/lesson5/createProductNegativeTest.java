@@ -7,18 +7,16 @@ import lesson5.util.RetrofitUtils;
 import lombok.SneakyThrows;
 import okhttp3.ResponseBody;
 import org.hamcrest.CoreMatchers;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import retrofit2.Response;
 
-import java.util.Objects;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class CreateProductTest {
+public class createProductNegativeTest {
+
 	  static ProductService productService;
 	  Product product;
 	  Faker faker = new Faker();
@@ -39,19 +37,24 @@ public class CreateProductTest {
 
 	  @Test
 	  @SneakyThrows
-	  void createProductInFoodCategoryTest() {
+	  void createProductInFoodCategoryNegativeTest() {
+			product = new Product()
+				.withId(1)
+				.withTitle(faker.food().ingredient())
+				.withCategoryTitle("Food")
+				.withPrice((int) (Math.random()*10000));
+
 			Response<Product> response = productService.createProduct(product).execute();
-			id = Objects.requireNonNull(response.body()).getId();
-			assertThat(response.isSuccessful(), CoreMatchers.is(true));
-//			System.out.println(id);
-			//assertThat();
+			assertThat(response.isSuccessful(), CoreMatchers.is(false));
+			assertThat(response.code(), equalTo(400));
 	  }
 
+
+	  @Test
 	  @SneakyThrows
-	  @AfterEach
-	  void DeleteProduct() {
-			Response<ResponseBody> response = productService.deleteProduct(id).execute();
-			assertThat(response.isSuccessful(), CoreMatchers.is(true));
-			assertThat(response.code(), equalTo(200));
+	  void DeleteProductNegativeTest() {
+			Response<ResponseBody> response = productService.deleteProduct(50).execute();
+			assertThat(response.isSuccessful(), CoreMatchers.is(false));
+			assertThat(response.code(), equalTo(500));
 	  }
 }

@@ -29,4 +29,12 @@ public class GetCategoryTest {
 			response.body().getProducts().forEach(product ->
 				assertThat(product.getCategoryTitle(), equalTo("Food")));
 	  }
+
+	  @SneakyThrows
+	  @Test
+	  void getCategoryByIdNegativeTest() {
+			Response<GetCategoryResponse> response = categoryService.getCategory(185).execute();
+			assertThat(response.isSuccessful(), CoreMatchers.is(false));
+			assertThat(response.code(), equalTo(404));
+	  }
 }
