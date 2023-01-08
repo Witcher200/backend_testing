@@ -14,6 +14,9 @@
       </list>
     </option>
   </component>
+  <component name="ProjectResources">
+    <resource url="http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" location="$USER_HOME$/AppData/Local/JetBrains/IdeaIC2022.3/extResources/cf63db72_mybatis-generator-config_1_0.dtd" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_19" project-jdk-name="graalvm-ce-19" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
